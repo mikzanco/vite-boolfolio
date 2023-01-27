@@ -37,9 +37,9 @@ export default{
     <div class="container">
         <h1>Elenco Progetti</h1>
 
-        <div v-for="project in projects" :key="project.id" class="project-box">
-            <h3>{{project.title}}</h3>
-            <p v-html="truncateText(project.text)"></p>
+        <div v-for="projects in projects" :key="projects.id" class="project-box">
+            <h3>{{projects.title}}</h3>
+            <p v-html="truncateText(projects.text)"></p>
         </div>
 
     </div>
