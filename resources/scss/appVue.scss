@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(42, 147, 165);
+    color: white;
+}
+
+.container{
+    width:  90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.project-box{
+    margin: 20px 0;
+    h3{
+        margin-bottom: 10px;
+    }
+}
