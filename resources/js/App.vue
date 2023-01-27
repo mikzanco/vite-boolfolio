@@ -9,7 +9,11 @@ export default{
         return {
             baseUrl: 'http://127.0.0.1:8000/api/',
             projects : [],
-            contentMaxLength: 150
+            contentMaxLength: 150,
+            // pagination:{
+            //     current:1,
+            //     last:null,
+            // }
         }
     },
     methods:{
