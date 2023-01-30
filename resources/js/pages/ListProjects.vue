@@ -1,6 +1,7 @@
 <script>
 
 import axios from 'axios';
+import { baseUrl } from '../data/data';
 
 import ProjectItem from '../components/ProjectItem.vue';
 
@@ -11,7 +12,7 @@ export default {
     },
     data(){
         return {
-            baseUrl: 'http://127.0.0.1:8000/api/',
+            baseUrl,
             projects : [],
             contentMaxLength: 150,
             // pagination:{
