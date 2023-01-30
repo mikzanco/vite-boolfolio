@@ -2,8 +2,13 @@
 
 import axios from 'axios';
 
+import ProjectItem from '../components/ProjectItem.vue';
+
 export default {
     name: 'ListProjects',
+    components:{
+        ProjectItem
+    },
     data(){
         return {
             baseUrl: 'http://127.0.0.1:8000/api/',
@@ -20,15 +25,10 @@ export default {
             axios.get(this.baseUrl + 'projects')
             .then(result => {
                 this.projects = result.data.projects;
-                console.log(result.data);
+                // console.log(this.projects);
             })
         },
-        truncateText(text){
-            if(text.length > this.contentMaxLength){
-                return text.slice(0, this.contentMaxLength) + '.....';
-            }
-            return text;
-        }
+
     },
     mounted(){
         this.getApi();
@@ -40,12 +40,10 @@ export default {
 <template>
 
     <div class="container">
+
         <h1>Elenco Progetti</h1>
 
-        <div v-for="project in projects" :key="project.id" class="project-box">
-            <h3>{{project.name}}</h3>
-            <p v-html="truncateText(project.summary)"></p>
-        </div>
+        <ProjectItem v-for="project in projects" :key="project.id" :project="project" />
 
     </div>
 

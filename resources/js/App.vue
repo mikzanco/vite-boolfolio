@@ -17,8 +17,12 @@ export default{
 <template>
 
     <Header />
+    <main>
+        <div class="container">
+            <router-view> </router-view>
+        </div>
+    </main>
 
-    <router-view> </router-view>
 
 </template>
 
